@@ -1,0 +1,8 @@
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.csproj.AssemblyReference.cache
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.AssemblyInfoInputs.cache
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.AssemblyInfo.cs
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.csproj.CoreCompileInputs.cache
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.RazorAssemblyInfo.cache
+c:\Users\Matheus Fraga\sistation\obj\Debug\net8.0\sistation.RazorAssemblyInfo.cs
