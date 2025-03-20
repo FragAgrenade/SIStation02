@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sistation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bce0f212851018fd3bf31d21f5be6e350749e1de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1661d40fd32430a0269579de02c0fc9caf7f552c")]
 [assembly: System.Reflection.AssemblyProductAttribute("sistation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sistation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

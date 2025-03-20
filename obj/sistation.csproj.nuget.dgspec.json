@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus Fraga\\sistation\\sistation.csproj": {}
+    "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus Fraga\\sistation\\sistation.csproj": {
+    "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus Fraga\\sistation\\sistation.csproj",
+        "projectUniqueName": "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj",
         "projectName": "sistation",
-        "projectPath": "C:\\Users\\Matheus Fraga\\sistation\\sistation.csproj",
-        "packagesPath": "C:\\Users\\Matheus Fraga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus Fraga\\sistation\\obj\\",
+        "projectPath": "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj",
+        "packagesPath": "C:\\Users\\matheus.torquato\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matheus Fraga\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\matheus.torquato\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
