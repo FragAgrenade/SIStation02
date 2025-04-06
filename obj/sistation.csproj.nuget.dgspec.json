@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj": {}
+    "C:\\Users\\brado\\source\\repos\\SIStation02\\sistation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj": {
+    "C:\\Users\\brado\\source\\repos\\SIStation02\\sistation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj",
+        "projectUniqueName": "C:\\Users\\brado\\source\\repos\\SIStation02\\sistation.csproj",
         "projectName": "sistation",
-        "projectPath": "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\sistation.csproj",
-        "packagesPath": "C:\\Users\\matheus.torquato\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matheus.torquato\\Documents\\sistation02\\SIStation02\\obj\\",
+        "projectPath": "C:\\Users\\brado\\source\\repos\\SIStation02\\sistation.csproj",
+        "packagesPath": "C:\\Users\\brado\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brado\\source\\repos\\SIStation02\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\matheus.torquato\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\brado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -56,6 +64,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "jQuery.Validation": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             }
           },
           "imports": [
@@ -77,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

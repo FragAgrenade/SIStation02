@@ -1,0 +1,9 @@
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.csproj.AssemblyReference.cache
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.AssemblyInfoInputs.cache
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.AssemblyInfo.cs
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.csproj.CoreCompileInputs.cache
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.RazorAssemblyInfo.cache
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.RazorAssemblyInfo.cs
+C:\Users\brado\source\repos\SIStation02\obj\Release\net8.0\sistation.sourcelink.json

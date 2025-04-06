@@ -1,15 +1,15 @@
-using System;
-using System.Collections.Generic;
-
 namespace sistation.Models
 {
     public class User
     {
-        public int UserId { get; set; }
-        public string Username { get; set; }
-        public string PasswordHash { get; set; }
-        public string Email { get; set; } 
-        public DateTime CreatedAt = DateTime.UtcNow;
-        public ICollection<Post> Posts { get; set; } = new List<Post>() ;
+        public int Id { get; set; }
+
+        public string Username { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
+
+        public ICollection<Post> Posts { get; set; } = new List<Post>();
+        public ICollection<Summary> Summaries { get; set; } = new List<Summary>();
+        public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
     }
 }

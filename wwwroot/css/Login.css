@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(90deg, #9B5DE5, #F15BB5, #F9C74F, #F8961E);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.yellow {
+    color: #FFD43B;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.small-text {
+    font-size: 12px;
+    color: #555;
+    margin: 15px 0;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ddd;
+}
+
+form a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin: 10px 0;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #FFD43B;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn.secondary {
+    background-color: #FFEA7F;
+    margin-top: 5px;
+}
