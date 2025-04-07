@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sistation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1b2dd8c770dff3c9257293a23d8dd99b00170ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2daca1188bbd559a60156563dbe304dd22663015")]
 [assembly: System.Reflection.AssemblyProductAttribute("sistation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sistation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
