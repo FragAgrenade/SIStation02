@@ -16,6 +16,7 @@ namespace sistation.Data
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Summary> Summaries { get; set; }
         public DbSet<Quiz> Quizzes { get; set; }
+        public DbSet<Friend> Friends { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

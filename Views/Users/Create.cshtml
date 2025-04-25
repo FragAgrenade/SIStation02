@@ -1,43 +1,42 @@
 @model sistation.Models.User
 
 @{
-    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Registrar-se";
 }
 
-<h1>Create</h1>
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
+        <h4 class="text-center fw-bold mb-4">CRIAR CONTA</h4>
 
-<h4>User</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Username" class="control-label"></label>
-                <input asp-for="Username" class="form-control" />
-                <span asp-validation-for="Username" class="text-danger"></span>
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <input asp-for="Username" class="form-control" placeholder="Nome de usuário" />
+                <span asp-validation-for="Username" class="text-danger small"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+
+            <div class="mb-3">
+                <input asp-for="Email" class="form-control" placeholder="E-mail" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="PasswordHash" class="control-label"></label>
-                <input asp-for="PasswordHash" class="form-control" />
-                <span asp-validation-for="PasswordHash" class="text-danger"></span>
+
+            <div class="mb-3">
+                <input asp-for="PasswordHash" class="form-control" type="password" placeholder="Senha" />
+                <span asp-validation-for="PasswordHash" class="text-danger small"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-success">Registrar</button>
+            </div>
+
+            <div class="text-center">
+                <span class="small">Já tem uma conta?</span>
+                <a asp-controller="Login" asp-action="Index" class="small ms-1 text-decoration-none">Entrar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial" />
 }
