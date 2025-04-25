@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using sistation.Data;
 using sistation.Models;
@@ -22,57 +17,43 @@ namespace sistation.Controllers
         // GET: Summaries
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Summaries.Include(s => s.User);
-            return View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Summaries/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var summary = await _context.Summaries
+            var summaries = await _context.Summaries
                 .Include(s => s.User)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (summary == null)
-            {
-                return NotFound();
-            }
-
-            return View(summary);
+                .ToListAsync();
+            return View(summaries);
         }
 
         // GET: Summaries/Create
         public IActionResult Create()
         {
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
         // POST: Summaries/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Content,UserId")] Summary summary)
+        public async Task<IActionResult> Create([Bind("Id,Title,Content")] Summary summary)
         {
+            if (TempData["UserLoggedId"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
+
+            summary.UserId = int.Parse(TempData["UserLoggedId"].ToString());
+
             if (ModelState.IsValid)
             {
                 _context.Add(summary);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", summary.UserId);
             return View(summary);
         }
 
         // GET: Summaries/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
+            if (id == null || _context.Summaries == null)
             {
                 return NotFound();
             }
@@ -82,13 +63,10 @@ namespace sistation.Controllers
             {
                 return NotFound();
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", summary.UserId);
             return View(summary);
         }
 
         // POST: Summaries/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Content,UserId")] Summary summary)
@@ -118,14 +96,13 @@ namespace sistation.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", summary.UserId);
             return View(summary);
         }
 
         // GET: Summaries/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
+            if (id == null || _context.Summaries == null)
             {
                 return NotFound();
             }
@@ -146,6 +123,10 @@ namespace sistation.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            if (_context.Summaries == null)
+            {
+                return Problem("Entity set 'ApplicationDbContext.Summaries' is null.");
+            }
             var summary = await _context.Summaries.FindAsync(id);
             if (summary != null)
             {

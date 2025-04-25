@@ -31,7 +31,7 @@ namespace sistation.Controllers
                 if (usuario != null)
                 {
                     TempData["UserLogged"] = usuario.Username;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Friends");
                 }
 
                 ModelState.AddModelError(string.Empty, "E-mail ou senha inválidos.");
