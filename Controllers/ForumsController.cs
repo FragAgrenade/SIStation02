@@ -34,7 +34,11 @@ namespace sistation.Controllers
             }
 
             var forum = await _context.Forums
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .Include(f => f.Posts.Where(p => p.ParentPostId == null))
+            .ThenInclude(p => p.Replies)
+        .Include(f => f.Posts)
+            .ThenInclude(p => p.User)
+        .FirstOrDefaultAsync(f => f.Id == id);
             if (forum == null)
             {
                 return NotFound();

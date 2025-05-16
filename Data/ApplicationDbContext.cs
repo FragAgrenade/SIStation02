@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using sistation.Models; // ou ajuste conforme seu namespace real das models
+using sistation.Models; 
 
 namespace sistation.Data
 {
@@ -15,8 +15,7 @@ namespace sistation.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Summary> Summaries { get; set; }
-        public DbSet<Quiz> Quizzes { get; set; }
-        public DbSet<Friend> Friends { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,12 +38,6 @@ namespace sistation.Data
                 .HasOne(s => s.User)
                 .WithMany(u => u.Summaries)
                 .HasForeignKey(s => s.UserId);
-
-            // Relacionamento: Quiz -> User
-            modelBuilder.Entity<Quiz>()
-                .HasOne(q => q.User)
-                .WithMany(u => u.Quizzes)
-                .HasForeignKey(q => q.UserId);
         }
     }
 }

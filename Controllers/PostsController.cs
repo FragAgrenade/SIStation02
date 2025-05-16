@@ -61,15 +61,35 @@ namespace sistation.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Content,UserId,ForumId")] Post post)
         {
+            post.UserId = 2;
+            post.ForumId = 2;
             if (ModelState.IsValid)
             {
                 _context.Add(post);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ForumId"] = new SelectList(_context.Forums, "Id", "Id", post.ForumId);
-            ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", post.UserId);
+            //ViewData["ForumId"] = new SelectList(_context.Forums, "Id", "Id", post.ForumId);
+            //ViewData["UserId"] = new SelectList(_context.Users, "Id", "Id", post.UserId);
             return View(post);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Responder(int ForumId, string Content, int? ParentPostId)
+        {
+            var post = new Post
+            {
+                ForumId = ForumId,
+                UserId = 2, // usuário fixo
+                Content = Content,
+                Title = "", // opcional
+                ParentPostId = ParentPostId
+            };
+
+            _context.Add(post);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Details", "Forums", new { id = ForumId });
         }
 
         // GET: Posts/Edit/5

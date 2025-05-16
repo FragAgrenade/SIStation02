@@ -10,6 +10,5 @@ namespace sistation.Models
 
         public ICollection<Post> Posts { get; set; } = new List<Post>();
         public ICollection<Summary> Summaries { get; set; } = new List<Summary>();
-        public ICollection<Quiz> Quizzes { get; set; } = new List<Quiz>();
     }
 }

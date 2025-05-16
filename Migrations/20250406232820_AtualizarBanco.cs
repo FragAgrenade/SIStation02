@@ -67,27 +67,7 @@ namespace sistation.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Quizzes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Quizzes", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Quizzes_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
+            
             migrationBuilder.CreateTable(
                 name: "Summaries",
                 columns: table => new
@@ -120,11 +100,6 @@ namespace sistation.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Quizzes_UserId",
-                table: "Quizzes",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Summaries_UserId",
                 table: "Summaries",
                 column: "UserId");
@@ -135,9 +110,6 @@ namespace sistation.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Posts");
-
-            migrationBuilder.DropTable(
-                name: "Quizzes");
 
             migrationBuilder.DropTable(
                 name: "Summaries");

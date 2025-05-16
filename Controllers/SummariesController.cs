@@ -9,6 +9,7 @@ namespace sistation.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+
         public SummariesController(ApplicationDbContext context)
         {
             _context = context;
@@ -32,14 +33,9 @@ namespace sistation.Controllers
         // POST: Summaries/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Content")] Summary summary)
+        public async Task<IActionResult> Create([Bind("Title,Content")] Summary summary)
         {
-            if (TempData["UserLoggedId"] == null)
-            {
-                return RedirectToAction("Index", "Login");
-            }
-
-            summary.UserId = int.Parse(TempData["UserLoggedId"].ToString());
+            summary.UserId = 2; // ID fixo para o usuário padrão
 
             if (ModelState.IsValid)
             {
@@ -47,6 +43,7 @@ namespace sistation.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(summary);
         }
 

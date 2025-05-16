@@ -13,9 +13,9 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index() 
     {
-        return RedirectToAction("Index", "Login");
+        return RedirectToAction("Index", "HomePage");
     }
 
     public IActionResult Privacy()
